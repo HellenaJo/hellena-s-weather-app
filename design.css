@@ -1,0 +1,53 @@
+.whole {
+  border: thick;
+  padding: 7px;
+  max-width: 800;
+  display: block;
+  height: 100%;
+  margin: 0 auto;
+  text-align: center;
+  background: radial-gradient(
+    328px at 2.9% 15%,
+    rgb(191, 224, 251) 0%,
+    rgb(232, 233, 251) 25.8%,
+    rgb(252, 239, 250) 50.8%,
+    rgb(234, 251, 251) 77.6%,
+    rgb(240, 251, 244) 100.7%
+  );
+}
+form {
+  position: static;
+  color: cornflowerblue;
+  margin-bottom: 15px;
+}
+.col-sm {
+  margin-top: 50px;
+  font-size: 25px;
+  color: black;
+}
+.col-sm-8 {
+  margin-top: 50px;
+  font-size: 30px;
+  color: black;
+}
+.col-sm-4 {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+label {
+  border: groove;
+  background: rgb(18, 18, 199);
+  color: purple;
+}
+button {
+  color: brown;
+}
+button hover {
+  color: salmon;
+}
+.unique {
+  color: black;
+}
+li {
+  list-style: none;
+}
