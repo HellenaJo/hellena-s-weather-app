@@ -1,7 +1,7 @@
 .whole {
   border: thick;
   padding: 7px;
-  max-width: 800;
+  width: 800px;
   display: block;
   height: 100%;
   margin: 0 auto;
@@ -14,6 +14,7 @@
     rgb(234, 251, 251) 77.6%,
     rgb(240, 251, 244) 100.7%
   );
+  
 }
 form {
   position: static;
@@ -50,4 +51,7 @@ button hover {
 }
 li {
   list-style: none;
+}
+.git{
+  text-align: center;
 }
