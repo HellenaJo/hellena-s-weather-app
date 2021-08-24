@@ -10,15 +10,18 @@ function formatDate(date) {
   return `${date}`;
 }
 
-function convertToCel(event) {
-  event.preventDefault();
-  document.querySelector("#temp").innerHTML = 23;
-}
-
 function convertToFah(event) {
   event.preventDefault();
-  document.querySelector("#temp").innerHTML = 73;
+  let temp = document.querySelector("#temp");
+     temp .innerHTML = (celcius * 9) / 5 + 32;
 }
+
+function convertToCel(event) {
+  event.preventDefault();
+  let temp = document.querySelector("#temp");
+   temp .innerHTML = celcius;
+}
+let celcius = null;
 
 let fah = document.querySelector("#fah-temp");
 fah.addEventListener("click", convertToCel);
@@ -38,6 +41,8 @@ function showTemperature(response) {
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
   );
+  let symbolElement = document.querySelector("#symbol");
+  symbolElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 }
 
 function search(city) {
@@ -69,7 +74,7 @@ dateElement.innerHTML = formatDate(today);
 let button = document.querySelector("button");
 button.addEventListener("click", getPosition);
 
-search("Kampala");
+search("KAMPALA");
 
 let order = document.querySelector(".special");
 order.addEventListener("click", searchTemp);

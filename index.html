@@ -10,29 +10,29 @@
     <link rel="stylesheet" href="design.css">
 </head>
 
-<body class="whole">
-     <div class="container">
-        <div class="row">
-    <div class="col-sm-4">
-
-        <form class="special">
+<body class="whole"> 
+    <div class="container">
+      
+      <form class="special" >
             <input type="search"  autocomplete="off" autofocus="on" placeholder="Name city" id="search-city"/> 
              <input type="submit" value="search"/>   
-             </form> 
+             </form>
              <button>My position</button>
-
-<h2 id="day-date">hi</h2>
+<h2 class="day" id="day-date">tue 09:00</h2>
 <h3>
-<div class="col-sm-8">
-     <div class=myCity></div>
-     <br /> <span class="temp" id="temp"></span>
-   <span id="degrees"> 
+      <div class="row">
+          <div class="col-6">
+              <div class=myCity></div>
+<img class="img" src="https://ss1.gstatic.com/onebox/weather/64/sunny.png" id="symbol"/> 
+<span class="temp" id="temp">
+</span><span id="degrees"> 
        <a href="#" id="temp-change">°C</a> /
      <a href="#" id="fah-temp">°F </a> 
    </span>
-    <div id="temp-description"></div>
-    <br />
-        <ul>
+    <div class="condition" id="temp-description"></div><br />
+    </div>
+    <div class="col-6">
+    <ul>
  <li>Humidity:<span class="humidity"></span>%</li>
  <li>windspeed:<span id="wind"></span> km/h</li>
     </ul>
@@ -40,6 +40,7 @@
 </div>
 </div>
 </h3>
+
 <h4>
 <div class="row">
  <div class="col-sm">
@@ -83,4 +84,5 @@
 <a href="https://github.com/HellenaJo/hellena-s-weather-app" class="git">Open source code</a><em> by Hellena</em>
 <script src=wow.js></script>
 </body>
+
 </html>
