@@ -10,24 +10,7 @@ function formatDate(date) {
   return `${date}`;
 }
 
-function convertToFah(event) {
-  event.preventDefault();
-  let temp = document.querySelector("#temp");
-     temp .innerHTML = (celcius * 9) / 5 + 32;
-}
 
-function convertToCel(event) {
-  event.preventDefault();
-  let temp = document.querySelector("#temp");
-   temp .innerHTML = celcius;
-}
-let celcius = null;
-
-let fah = document.querySelector("#fah-temp");
-fah.addEventListener("click", convertToCel);
-
-let cel = document.querySelector("#temp-change");
-cel.addEventListener("click", convertToFah);
 
 function showTemperature(response) {
   document.querySelector(".temp").innerHTML = Math.round(
@@ -43,6 +26,8 @@ function showTemperature(response) {
   );
   let symbolElement = document.querySelector("#symbol");
   symbolElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+
+  celTemp = response.data.main.temp;
 }
 
 function search(city) {
@@ -67,6 +52,19 @@ function getPosition() {
   navigator.geolocation.getCurrentPosition(myPosition);
 }
 
+function showFah(event) {
+  event.preventDefault();
+  let fahrenheitTemp = (celTemp * 9) / 5 + 32;
+  let tempElement = document.querySelector("#temp");
+  tempElement.innerHTML = Math.round(fahrenheitTemp);
+}
+
+function showCel(event) {
+  event.preventDefault();
+  let tempElement = document.querySelector("#temp");
+  tempElement.innerHTML = Math.round(celTemp);
+}
+
 let dateElement = document.querySelector("#day-date");
 let today = new Date();
 dateElement.innerHTML = formatDate(today);
@@ -74,7 +72,15 @@ dateElement.innerHTML = formatDate(today);
 let button = document.querySelector("button");
 button.addEventListener("click", getPosition);
 
-search("KAMPALA");
+let celTemp = null;
 
 let order = document.querySelector(".special");
 order.addEventListener("click", searchTemp);
+
+let fahrenheit = document.querySelector("#fah-temp");
+fahrenheit.addEventListener("click", showFah);
+
+let celcius = document.querySelector("#temp-change");
+celcius.addEventListener("click", showCel);
+
+search("KAMPALA");

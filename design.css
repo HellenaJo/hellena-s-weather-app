@@ -1,17 +1,10 @@
-.whole {
+.whole{
   border: 1px solid #dadde1;
   border-radius: 5px;
   padding: 20px;
   max-width: 600px;
   margin: 30px auto;
-  background-image: radial-gradient(
-    328px at 2.9% 15%,
-    rgb(191, 224, 251) 0%,
-    rgb(232, 233, 251) 25.8%,
-    rgb(252, 239, 250) 50.8%,
-    rgb(234, 251, 251) 77.6%,
-    rgb(240, 251, 244) 100.7%
-  );
+  background-size: linear-gradient(-20deg, #d558c8 0%, #24d292 100%);
 }
 .myCity{
   color: blueviolet;
@@ -27,6 +20,7 @@ li{
   list-style: none;
   margin: 0;
   padding: 0;
+
 }
 ul{
   margin: 0;
@@ -69,9 +63,10 @@ label {
   color: purple;
 }
 button {
-  color: brown;
+  color: #2262b4;
+  
 }
-button hover {
+button:hover {
   color: salmon;
 }
 .unique {
@@ -88,7 +83,25 @@ button hover {
   position: relative;
   font-size: 17px;
   top:-32px;
+  text-transform: capitalize;
 }
 .git{
-  text-align: center;
+  text-align:center;
+  bottom: 4px;
+}
+#fah-temp { 
+  color:black;
+  cursor:default;
+  text-decoration: none;
+}
+#fah-temp:hover{
+  text-decoration: none;
+}
+#temp-change{
+  color: black;
+  cursor: default;
+  text-decoration: none;
+}
+#temp-change:hover{
+  text-decoration: none;
 }
