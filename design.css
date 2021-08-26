@@ -1,19 +1,17 @@
 .whole{
   border: 1px solid #dadde1;
-  border-radius: 5px;
-  padding: 20px;
-  max-width: 600px;
-  margin: 30px auto;
-  background-size: linear-gradient(-20deg, #d558c8 0%, #24d292 100%);
+  border-radius: 7px;
+  padding: 17px ;
+  background-image: linear-gradient(-20deg, #d558c8 0%, #24d292 100%);
 }
 .myCity{
-  color: blueviolet;
-  font-size: 24px;
-  font-weight: 100;
+  color: rgb(220, 214, 224);
+  font-size: 27px;
+  font-weight: 200;
   line-height: 28px;
 }
 li{
-  color: plum;
+  color: #dadde1;
   font-size: 24px;
   font-weight: 100;
   line-height:28px;
@@ -31,22 +29,9 @@ form {
   color: cornflowerblue;
   margin-bottom: 15px;
 }
-.col-sm {
-  margin-top: 50px;
-  font-size: 25px;
-  color: black;
-}
-.col-sm-8 {
-  margin-top: 50px;
-  font-size: 30px;
-  color: black;
-}
-.col-sm-4 {
-  margin-top: 60px;
-  margin-bottom: 60px;
-}
 .day{
-  font-size: 27px;
+  font-size: 20px;
+  font-weight: 300;
 }
 .temp{
   color:#2262b4;
@@ -55,6 +40,7 @@ form {
   font-weight: 400;
 }
 .condition{
+   text-transform: capitalize;
   color: #2262b4;
 }
 label {
@@ -77,17 +63,15 @@ button:hover {
   height: 64px;
   width: 57px;
   margin-top: -7px;
- 
 }
 #degrees{
   position: relative;
   font-size: 17px;
   top:-32px;
-  text-transform: capitalize;
 }
-.git{
-  text-align:center;
-  bottom: 4px;
+.weather-wrapper{
+max-width: 700px;
+   margin: 30px auto;
 }
 #fah-temp { 
   color:black;
