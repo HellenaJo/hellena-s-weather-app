@@ -33,33 +33,31 @@ function formatDay(timestamp) {
 
 }
  
-
 function showForecast(response) {
   let myCast = response.data.daily;
   let forecastElement = document.querySelector("#cast");
   forecastHTML = `<div class="row">`;
   myCast.forEach(function (newDay, index) {
-    
-    if (index < 7) {
-      
-      forecastHTML = forecastHTML +
+    if (index < 6) {
+      forecastHTML =
+        forecastHTML +
         `
         <div class="col-2">
-       
             <div class="forecast-date">
-           ${formatDay(newDay.dt) }
+           ${formatDay(newDay.dt)}
           </div>
-            <img src="http://openweathermap.org/img/wn/${newDay.weather[0].icon}@2x.png" alt="" width="40"/>
+            <img src="http://openweathermap.org/img/wn/${
+              newDay.weather[0].icon
+            }@2x.png" alt="" width="42"/>
             <div class="forecast-temp">
             <span class="max">${Math.round(newDay.temp.max)}°</span> 
             <span class="min">${Math.round(newDay.temp.min)}°</span>
             </div>
-         </div>
           </div>`;
-      forecastHTML = forecastHTML + `</div>`;
-      forecastElement.innerHTML = forecastHTML;
     }
   });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
 }
 
 function getPlaceForecast(coordinates) {

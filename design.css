@@ -2,10 +2,10 @@
   border: 1px solid #dadde1;
   border-radius: 7px;
   padding: 17px ;
-background: radial-gradient(944px at 6.9% 46.3%, rgb(254, 192, 193) 0%, rgb(254, 192, 193) 0%, rgb(0, 67, 105) 100.2%);
+ background: linear-gradient(179deg, rgb(110, 144, 242) 3.3%, rgb(245, 193, 193) 100%);
 }
 .myCity{
-  color: rgb(220, 214, 224);
+  color: rgb(218, 207, 226);
   font-size: 27px;
   font-weight: 200;
   line-height: 28px;
@@ -28,6 +28,7 @@ form {
   position: static;
   color: cornflowerblue;
   margin-bottom: 15px;
+  
 }
 .day{
   font-size: 20px;
@@ -41,15 +42,12 @@ form {
 }
 .condition{
    text-transform: capitalize;
-  color: #2262b4;
+  color: #4d76aa;
 }
-label {
-  border: groove;
-  background: rgb(18, 18, 199);
-  color: purple;
-}
+l
 button {
   color: #2262b4;
+  padding: 5px;
   
 }
 button:hover {
@@ -61,7 +59,7 @@ button:hover {
 .img{
   margin-right: 7px;
   height: 64px;
-  width: 57px;
+  width: 60px;
   margin-top: -7px;
 }
 #degrees{
@@ -70,8 +68,9 @@ button:hover {
   top:-32px;
 }
 .weather-wrapper{
-max-width: 700px;
+max-width: 600px;
    margin: 30px auto;
+border-right:100px;
 }
 #fah-temp { 
   color:black;
@@ -90,10 +89,25 @@ max-width: 700px;
   text-decoration: none;
 }
 .the-forecast{
-  margin-top: 20px;
+  margin-top: 16px;
   text-align: center;
-  font-size: 17px;
+  font-size: 19px;
+  font-weight: 180;
+
 }
 .min{
   opacity: 0.7;
+}
+.forecast-date{
+  font-weight: 180;
+}
+.cities{
+border-style: solid;
+border-color: black;
+padding: 4px;
+}
+.find{
+border-style: solid;
+border-color: black;
+padding: 4px;
 }
