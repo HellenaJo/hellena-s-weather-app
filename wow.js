@@ -38,11 +38,11 @@ function showForecast(response) {
   let forecastElement = document.querySelector("#cast");
   forecastHTML = `<div class="row">`;
   myCast.forEach(function (newDay, index) {
-    if (index < 6) {
+    if (index < 7) {
       forecastHTML =
         forecastHTML +
         `
-        <div class="col-2">
+        <div class="col">
             <div class="forecast-date">
            ${formatDay(newDay.dt)}
           </div>
@@ -86,20 +86,8 @@ function showTemperature(response) {
   symbolElement.setAttribute("alt", response.data.weather[0].description);
 
   getPlaceForecast(response.data.coord);
-}
 
-function myPosition(position) {
-  alert(
-    `my location is ${position.coords.latitude} and ${position.coords.longitude}`
-  );
 }
-
-function getPosition() {
-  navigator.geolocation.getCurrentPosition(myPosition);
-}
-
-let button = document.querySelector("button");
-button.addEventListener("click", getPosition);
 
 function search(city) {
   let apiKey = "70eb5822db0e7a548a59c84b59fa1550";
